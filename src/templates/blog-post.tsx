@@ -10,10 +10,10 @@ const BlogPostTemplate: React.FC<
     site: {
       siteMetadata?: {
         title: string
-      },
+      }
     }
-    markdownRemark: any,
-    previous: any,
+    markdownRemark: any
+    previous: any
     next: any
   }>
 > = ({ data, location }) => {

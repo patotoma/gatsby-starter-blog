@@ -10,7 +10,7 @@ const BlogIndex: React.FC<
     site: {
       siteMetadata?: {
         title: string
-      },
+      }
     }
     allMarkdownRemark: {
       nodes: any[]

@@ -2,8 +2,8 @@ import * as React from "react"
 import { PageProps, Link } from "gatsby"
 
 const Layout: React.FC<{
-  location: PageProps['location'];
-  title?: string;
+  location: PageProps["location"]
+  title?: string
 }> = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
