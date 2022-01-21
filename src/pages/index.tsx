@@ -1,24 +1,24 @@
-import * as React from "react"
-import { PageProps, Link, graphql } from "gatsby"
+import * as React from "react";
+import { PageProps, Link, graphql } from "gatsby";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const BlogIndex: React.FC<
   PageProps<{
     site: {
       siteMetadata?: {
-        title: string
-      }
-    }
+        title: string;
+      };
+    };
     allMarkdownRemark: {
-      nodes: any[]
-    }
+      nodes: any[];
+    };
   }>
 > = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
     return (
@@ -31,7 +31,7 @@ const BlogIndex: React.FC<
           gatsby-config.js).
         </p>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -39,8 +39,8 @@ const BlogIndex: React.FC<
       <Seo title="All posts" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+        {posts.map((post) => {
+          const title = post.frontmatter.title || post.fields.slug;
 
           return (
             <li key={post.fields.slug}>
@@ -67,14 +67,14 @@ const BlogIndex: React.FC<
                 </section>
               </article>
             </li>
-          )
+          );
         })}
       </ol>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -97,4 +97,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

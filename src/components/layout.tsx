@@ -1,26 +1,26 @@
-import * as React from "react"
-import { PageProps, Link } from "gatsby"
+import * as React from "react";
+import { PageProps, Link } from "gatsby";
 
 const Layout: React.FC<{
-  location: PageProps["location"]
-  title?: string
+  location: PageProps["location"];
+  title?: string;
 }> = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  let header
+  const rootPath = `${__PATH_PREFIX__}/`;
+  const isRootPath = location.pathname === rootPath;
+  let header;
 
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
         <Link to="/">{title}</Link>
       </h1>
-    )
+    );
   } else {
     header = (
       <Link className="header-link-home" to="/">
         {title}
       </Link>
-    )
+    );
   }
 
   return (
@@ -33,7 +33,7 @@ const Layout: React.FC<{
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
