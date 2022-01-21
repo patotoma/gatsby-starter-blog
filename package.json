@@ -34,7 +34,9 @@
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.5",
+    "husky": "^7.0.4",
     "prettier": "^2.5.1",
+    "pretty-quick": "^3.1.3",
     "typescript": "^4.5.5"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
@@ -54,6 +56,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "prepare": "husky install"
   }
 }
