@@ -1,6 +1,5 @@
+import { graphql, PageProps } from "gatsby";
 import * as React from "react";
-import { PageProps, graphql } from "gatsby";
-
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
